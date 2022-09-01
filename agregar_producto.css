@@ -1,0 +1,261 @@
+/*CSS Reset / Normalize*/
+
+:root{
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+   --cor-de-fondo-about: #DFECF0;
+}
+button:hover{
+    cursor:pointer;
+}
+button:focus{
+    outline: none;
+    border: 1px solid #5D5D5D;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/* SECCION MENU */
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    background: #FFFFFF;
+}
+.menu__header{
+    display: flex;
+    align-items: center;
+}
+.menu__header__buscador{
+    display: flex;
+}
+.buscador{
+    width: 75%;
+    font-size: 15px;
+    padding: 0.5rem;
+    border-radius: 20px 0 0 20px;
+    background: #EBEFF0;
+    border: 1px solid #EBEFF0;
+}
+.menu__header-boton-buscar{
+    background: #EBEFF0;
+    border: 1px solid #EBEFF0;
+    border-radius: 0 20px 20px 0;
+    height: 35px;
+    width: 35px;
+    background-image: url(./assets/lupa.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.menu__header-boton-administrador{
+    border: 1px solid #3498DB;
+    padding: 1rem;
+    color: #3498DB;
+    background-color: #FFFFFF;
+}    
+/* SECCION FORMULARIO AGREGAR PRODUCTO */
+section.agregar__producto{
+    background: #EBEFF0;
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenedor_agregar__producto-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5D5D5D;
+}
+.form_nuevoproducto{
+    display: flex;
+    width: 75%;
+    row-gap: 2rem;
+    padding: 2rem 0;
+    flex-direction: column;
+}
+input{
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+}
+.form_nuevoproducto__descripcion{
+    border: none;
+    margin: 0 0 1rem 0;
+    padding: 1rem;
+    resize: none;
+    font-family: 'Raleway';
+    font-size: 1rem;
+    color: #5D5D5D;
+}
+input:focus, textarea:focus{
+    outline: none;
+    border-bottom: 1px solid #5D5D5D;
+}
+.form_nuevoproducto__boton-boton{
+    border: 1px solid #3498DB;
+    background: #3498DB;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #E9F5FF;
+}
+.form_nuevoproducto__boton-boton:hover, .form_nuevoproducto__boton-boton:focus{
+    outline: none;
+    border: 1px solid #5D5D5D;
+}
+
+/* SECCION CONTACTO */
+.formcontacto{
+    background: #E9F5FF;
+}
+.formcontacto__contenedor{
+    background: #E9F5FF;
+    display: grid;
+    grid-auto-flow: column;
+    padding: 2rem 5rem;
+    column-gap: 1rem;
+}
+.formcontacto__nosotros{
+    display: flex;
+}
+.formcontacto__nosotros-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #5D5D5D;
+}
+.formcontacto__title{
+    margin: 0 0 0.75rem 0;
+    font-weight: bold;
+}
+.formcontacto__nombre-titulo{
+    font-size: 12px;
+    background: #FFFFFF;
+    color: #5D5D5D;
+    padding: 0.3rem;
+}
+.formcontacto__form{
+    display: flex;
+    flex-direction: column;
+}
+.formcontacto__nombre-input:focus, .formcontacto__textarea:focus, .formcontacto__boton:focus{
+    outline: none;
+    border-bottom: 1px solid #5D5D5D;
+}
+.formcontacto__nombre-input, .formcontacto__textarea{
+    border: none;
+    margin: 0 0 1rem 0;
+    padding: 0.3rem;
+    resize: none;
+    font-family: 'Raleway';
+    font-size: 15px;
+    color: #5D5D5D;
+}
+.formcontacto__boton{
+    border: none;
+    padding: 1rem;
+    background: #3498DB ;
+    color: #F5F5F5;
+}
+.footer{
+    padding: 2rem;
+    background: #FFFFFF;
+}
+.footer__rodape{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #5D5D5D;
+    line-height: 1.5rem;
+}
+
+/* RESPONSIVO PARA TABLETS */
+@media screen and (max-width: 768px) { 
+    /* SECCION FORMULARIO AGREGAR PRODUCTO */
+    .form_nuevoproducto{
+        width: 100%;
+    }
+    /* SECCION FORMULARIO CONTACTO */
+    .formcontacto__contenedor{
+        display: grid;
+        grid-auto-flow: row;
+    }
+    .formcontacto__logo{
+        grid-column-start: 1;
+    }
+    .formcontacto__nosotros{
+        grid-column-start: 1;
+        padding: 1rem 0;
+    }
+    .formcontacto__contacto{
+        grid-column-start: 2;
+    }
+
+}
+
+/* RESPONSIVO PARA CELULAR */
+@media screen and (max-width: 360px) {
+    /* SECCION MENU */
+    .menu__header-logo{
+        width: 75%;
+    }
+    .buscador{
+        display: none;
+    }
+    .menu{
+        justify-content: space-between;
+        padding: 1rem 0rem;
+    }
+    .menu__header{
+        margin: 0 0 0 1rem;
+    }
+    .menu__header__buscador{
+        order: 1;
+    }
+    .menu__header-boton-buscar{
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        margin: 0 0.5rem 0 0.5rem;
+    }
+     .menu__header-boton-administrador{
+        padding: 0;
+    }
+
+    /* SECCION AGREGAR PRODUCTO */
+    section.agregar__producto{
+        padding: 1rem;
+    }
+    .form_nuevoproducto__boton-boton{
+        width: auto;
+    }
+    /* SECCION CONTACTO */
+    .formcontacto__contenedor{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+        align-items: center;
+        text-align: center;
+        line-height: 2rem;
+    }
+    .formcontacto__title{
+        text-align: initial;
+        margin: 0;
+    }
+    .formcontacto__form{
+        text-align: initial;
+    }
+}

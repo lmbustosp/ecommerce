@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Referencia de la hoja de estilo de Css -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style_login.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    
+    <!-- Fuente del Proyecto Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <title>Luqui´s Ecommerce</title>
+</head>
+<body>
+    <!-- Sección del Menú  -->
+    <div class="todo">
+    <section class="menu">
+        <header class="menu__header">
+            <a href="./index.html"><img src="assets/Logo.png"></a>
+        </header>
+        <div class="menu__header__buscador">
+            <input class="buscador" type="text" name="buscador" placeholder="Que desea buscar?">
+            <button class="menu__header-boton-buscar"></button>
+        </div> 
+    </section>
+
+    <!-- Sección login -->
+    <section class="login">
+        <div class="contenedor_login">
+            <div class="contenedor_login__title">Iniciar Sesión</div>
+            <form action="" class="formlogin">
+                <input type="email" class="formlogin_usuario" placeholder="Escriba su correo electrónico" required>
+                <input type="password" class="formlogin_password" placeholder="Escriba su contraseña" required>
+                <!-- <div class="formlogin_boton"> -->
+                    <button class="formlogin_boton-boton">Entrar</button>
+                <!-- </div> -->
+            </form>
+        </div>
+
+    </section>
+    
+    <!-- Sección de Contacto -->
+    <section class="formcontacto" id="contacto">
+        <div class="formcontacto__contenedor">
+        <div class="formcontacto__logo">
+            <img src="./assets/Logo.png" alt="logo" class="formcontacto__logo-img">
+        </div>
+        <div class="formcontacto__nosotros">
+            <ul class="formcontacto__nosotros-items">
+                <li class="formcontacto__nosotros-items--link">Quienes somos</li>
+                <li class="formcontacto__nosotros-items--link">Política de privacidad</li>
+                <li class="formcontacto__nosotros-items--link">Programa de fidelidad</li>
+                <li class="formcontacto__nosotros-items--link">Nuestras tiendas</li>
+                <li class="formcontacto__nosotros-items--link">Franquicias</li>
+                <li class="formcontacto__nosotros-items--link">Anuncie aquí</li>
+            </ul>
+        </div>
+        <div  class="formcontacto__contacto">
+            <div class="formcontacto__text">
+                <h2 class="formcontacto__title">Hable con nosotros</h2>
+                <form class="formcontacto__form" name="form">
+                    <p class="formcontacto__nombre-titulo">Nombre</p>
+                    <input class="formcontacto__nombre-input" type="text" name="nombre" placeholder="" required>
+                    <textarea class="formcontacto__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Escriba su mensaje" required  ></textarea>
+                    <div class="botoncito">
+                        <button type="submit" class="formcontacto__boton" name="boton">Enviar mensaje</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Sección de Footer -->
+    <section class="footer">
+        <div class="footer__rodape">
+            <p>Desarrollado por el Luqui</p>
+            <p>2022</p>
+        </div>
+    </section>
+    </div>
+ <!-- Script del documento JavaScript -->
+<script src="validacion.js"></script>
+</body>
+</html>
